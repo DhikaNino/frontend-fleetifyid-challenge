@@ -5,9 +5,10 @@ Ini adalah frontend untuk Fullstack Developer Challenge Test fleetify.id, disini
 
 ## Installation
 
-1. **Clone the repository**
+1. **Clone repository**
    ```bash
-   cd frontend
+   git clone https://github.com/DhikaNino/frontend-fleetifyid-challenge.git
+   cd frontend-fleetifyid-challenge
    ```
 
 2. **Install dependencies**:
