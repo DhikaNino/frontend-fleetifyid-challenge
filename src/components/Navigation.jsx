@@ -5,9 +5,9 @@ const Navigation = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef(null);
-  
+
   const navItems = [
-    { path: '/', label: 'Dashboard'},
+    { path: '/', label: 'Dashboard' },
     { path: '/employees', label: 'Karyawan' },
     { path: '/departments', label: 'Departemen' },
     { path: '/attendance', label: 'Absensi' },
@@ -39,13 +39,13 @@ const Navigation = () => {
   }, [isMenuOpen]);
 
   return (
-    <header className="header">
+    <header className="header" ref={navRef}>
       <div className="container">
-        <nav className="nav" ref={navRef}>
+        <nav className="nav">
           <div className="nav-brand">
             <h1 className="nav-title">Fleetify.id</h1>
           </div>
-          
+
           <div className="nav-desktop">
             {navItems.map((item) => (
               <Link
@@ -59,7 +59,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          <button 
+          <button
             className={`nav-toggle ${isMenuOpen ? 'active' : ''}`}
             onClick={toggleMenu}
             aria-label="Buka menu navigasi"
