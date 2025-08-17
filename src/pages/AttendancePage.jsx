@@ -47,7 +47,7 @@ const AttendancePage = () => {
       const response = await attendanceAPI.getAll(params);
       setAttendanceLogs(response.data.data || response.data);
     } catch (err) {
-      setError('Gagal memuat log absensi. Silakan coba lagi.');
+      setError('Gagal memuat data. Silakan coba lagi.');
       console.error('Error fetching attendance logs:', err);
     } finally {
       setLoading(false);

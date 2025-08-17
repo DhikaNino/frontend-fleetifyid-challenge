@@ -36,7 +36,7 @@ const DepartmentsPage = () => {
       const response = await departmentAPI.getAll();
       setDepartments(response.data.data || response.data);
     } catch (err) {
-      setError('Gagal memuat departemen. Silakan coba lagi.');
+      setError('Gagal memuat data. Silakan coba lagi.');
       console.error('Error fetching departments:', err);
     } finally {
       setLoading(false);

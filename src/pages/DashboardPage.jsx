@@ -38,7 +38,7 @@ const DashboardPage = () => {
         recentActivities: todayAttendance.slice(0, 5) 
       });
     } catch (err) {
-      setError('Gagal memuat data dashboard. Silakan coba lagi.');
+      setError('Gagal memuat data. Silakan coba lagi.');
       console.error('Error fetching dashboard data:', err);
     } finally {
       setLoading(false);

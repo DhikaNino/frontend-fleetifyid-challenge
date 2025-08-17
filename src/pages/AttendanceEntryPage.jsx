@@ -21,7 +21,7 @@ const AttendanceEntryPage = () => {
       const response = await employeeAPI.getAll();
       setEmployees(response.data.data || response.data);
     } catch (err) {
-      setError('Gagal memuat karyawan. Silakan coba lagi.');
+      setError('Gagal memuat data. Silakan coba lagi.');
       console.error('Error fetching employees:', err);
     } finally {
       setLoading(false);
